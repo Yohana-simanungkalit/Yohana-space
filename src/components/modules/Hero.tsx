@@ -1,5 +1,5 @@
 import {Button, Col, Row} from "antd";
-import BackgroundImage from "./../../assets/gambar2.jpeg";
+import BackgroundImage from "./../../assets/yo.jpeg";
 import {LinkedinFilled, LinkedinOutlined, MailFilled} from "@ant-design/icons";
 
 export default function Hero() {
