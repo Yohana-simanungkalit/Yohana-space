@@ -9,7 +9,7 @@ import {
 } from "@ant-design/icons";
 import { useState, useEffect } from "react";
 
-export default function About() {
+export default function About(props:any) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -84,7 +84,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="min-h-screen py-14 bg-gradient-to-b from-background to-muted/20">
+    <section ref={props.ref} className="min-h-screen py-14 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Experience Timeline Section */}

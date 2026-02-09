@@ -10,7 +10,7 @@ import {
 } from "@ant-design/icons";
 import { Button, Card, Col, Row } from "antd";
 
-export default function Contact() {
+export default function Contact(props:any) {
   const contacts = [
     {
       name: "Email",
@@ -46,7 +46,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contacts" className="min-h-screen py-14 bg-gradient-to-b from-background to-muted/20">
+    <section ref={props.ref} className="min-h-screen py-14 bg-gradient-to-b from-background to-muted/20">
       <div className="container max-w-5xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
