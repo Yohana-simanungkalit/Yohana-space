@@ -2,7 +2,7 @@ import {Button, Col, Row} from "antd";
 import BackgroundImage from "./../../assets/yo.jpeg";
 import {LinkedinFilled, LinkedinOutlined, MailFilled} from "@ant-design/icons";
 
-export default function Hero() {
+export default function Hero(props:any) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Image */}
@@ -26,10 +26,10 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-wrap gap-4 justify-center mt-10">
-          <Button size="large" type="primary">
+          <Button size="large" type="primary" onClick={props.scrollToAbout}>
             View My Project
           </Button>
-          <Button size="large" type="primary">
+          <Button size="large" type="primary" onClick={props.scrollToContact}>
             Get In Touch
           </Button>
         </div>
