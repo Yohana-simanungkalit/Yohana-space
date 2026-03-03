@@ -50,7 +50,7 @@ export default function Skill() {
                 Expertise
               </span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-2xl sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               A diverse set of skills and technologies that I use to bring ideas
               to life
             </p>
@@ -80,7 +80,7 @@ export default function Skill() {
                 >
                   {/* Description */}
                   <div className="text-center">
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-2xl sm:text-xl  text-muted-foreground leading-relaxed">
                       {item.description}
                     </p>
                   </div>
@@ -97,7 +97,7 @@ export default function Skill() {
           {/* Additional Info */}
           <div className="mt-16 text-center">
             <div className="inline-flex items-center justify-center px-6 py-3 bg-card border-2 border-border rounded-full hover:border-purple-500/50 transition-all duration-300">
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-2xl sm:text-xl">
                 <span className="font-semibold text-foreground">Always learning</span> and exploring new technologies
               </p>
             </div>
