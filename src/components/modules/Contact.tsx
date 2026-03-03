@@ -39,7 +39,7 @@ export default function Contact(props:any) {
     },
     {
       icon: <LinkedinOutlined/>,
-      link: "www.linkedin.com/in/27yohanasimanungkalit",
+      link: "http://linkedin.com/in/27yohanasimanungkalit/",
       color: "hover:bg-blue-600",
       label: "LinkedIn",
     },
@@ -56,7 +56,7 @@ export default function Contact(props:any) {
               Together
             </span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-2xl sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Have a project in mind? I'd love to hear about it. Get in touch and
             let's create something amazing together.
           </p>
@@ -81,12 +81,12 @@ export default function Contact(props:any) {
                   </div>
 
                   {/* Label */}
-                  <h3 className="text-lg font-semibold text-muted-foreground mb-2 uppercase tracking-wider text-sm">
+                  <h3 className="text-2xl sm:text-sm font-semibold text-muted-foreground mb-2 uppercase tracking-wider text-lg">
                     {item.name}
                   </h3>
 
                   {/* Contact Info */}
-                  <p className="text-xl font-bold text-foreground group-hover:text-purple-600 transition-colors">
+                  <p className="text-xl sm:text-lg font-bold text-foreground group-hover:text-purple-600 transition-colors">
                     {item.body}
                   </p>
 
@@ -102,7 +102,7 @@ export default function Contact(props:any) {
 
         {/* Social Links */}
         <div className="text-center">
-          <p className="text-muted-foreground mb-6 text-lg font-medium">
+          <p className="text-muted-foreground mb-6 text-2xl sm:text-lg font-medium">
             Connect with me
           </p>
           <div className="flex justify-center gap-6">
@@ -125,16 +125,16 @@ export default function Contact(props:any) {
         {/* Call to Action */}
         <div className="mt-8 text-center">
           <div className="inline-flex flex-col items-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl border-2 border-purple-200">
-            <p className="text-lg text-foreground mb-4">
+            <p className="text-2xl sm:text-lg text-foreground mb-4">
               Ready to start a conversation?
             </p>
             <Button
               type="primary"
               size="large"
               href="mailto:yohanaesimanungkalit@gmail.com"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 border-0 h-12 px-8 text-base font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
+              className=" bg-gradient-to-r from-purple-500 to-pink-500 border-0 h-12 px-8 text-base font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
-              Send me an email
+              <p className="text-xl sm:text-lg">Send me an email</p>
             </Button>
           </div>
         </div>

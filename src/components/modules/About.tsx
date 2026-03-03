@@ -140,7 +140,7 @@ export default function About(props:any) {
                       >
                         {/* Year Badge */}
                         <div className="mb-4">
-                          <span className="px-5 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 text-sm font-semibold backdrop-blur-sm shadow-lg">
+                          <span className="px-5 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 text-lg md:text-sm font-semibold backdrop-blur-sm shadow-lg">
                             {exp.year}
                           </span>
                         </div>
@@ -182,10 +182,10 @@ export default function About(props:any) {
                           >
                             {exp.company}
                           </p>
-                          <p className="text-sm text-muted-foreground mb-4 font-medium">
+                          <p className="text-lg md:text-sm text-muted-foreground mb-4 font-medium">
                             {exp.duration}
                           </p>
-                          <p className="text-foreground/80 mb-6 leading-relaxed">
+                          <p className="text-lg md:text-sm text-foreground/80 mb-6 leading-relaxed">
                             {exp.description}
                           </p>
                         </div>

@@ -7,7 +7,7 @@ export default function Hero(props:any) {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-70"
+        className="absolute inset-6 md:inset-5 bg-cover bg-center opacity-50"
         style={{backgroundImage: `url(${BackgroundImage})`}}
       >
         <div className="absolute inset-0 bg-gradient-hero" />
