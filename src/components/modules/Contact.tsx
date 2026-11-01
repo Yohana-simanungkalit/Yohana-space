@@ -39,18 +39,18 @@ export default function Contact(props:any) {
     },
     {
       icon: <LinkedinOutlined/>,
-      link: "www.linkedin.com/in/yesimanungkalit",
+      link: "https://www.linkedin.com/in/yesimanungkalit/",
       color: "hover:bg-blue-600",
       label: "LinkedIn",
     },
   ];
 
   return (
-    <section ref={props.ref} className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+    <section ref={props.ref} className="min-h-screen bg-gradient-to-b from-background to-muted/20 mb-5">
       <div className="container max-w-5xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-14">
-          <h1 className="font-serif font-bold text-4xl md:text-5xl mb-6 text-foreground">
+        <div className="text-center mb-10">
+          <h1 className="font-serif font-bold text-4xl md:text-5xl mb-2 text-foreground">
             Let's Work{" "}
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Together
@@ -63,7 +63,7 @@ export default function Contact(props:any) {
         </div>
 
         {/* Contact Cards */}
-        <Row gutter={[24, 24]} className="mb-5">
+        <Row gutter={[24, 24]} className="mb-2">
           {contacts.map((item, key) => (
             <Col xs={24} sm={12} key={key}>
               <Card
@@ -123,7 +123,7 @@ export default function Contact(props:any) {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-6 text-center">
+        <div className="mt-5 text-center">
           <div className="inline-flex flex-col items-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl border-2 border-purple-200">
             <p className="text-2xl sm:text-lg text-foreground mb-4">
               Ready to start a conversation?
