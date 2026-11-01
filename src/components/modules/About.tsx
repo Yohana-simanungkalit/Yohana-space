@@ -9,7 +9,7 @@ import {
 } from "@ant-design/icons";
 import { useState, useEffect } from "react";
 
-export default function About(props:any) {
+export default function About(props: any) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -19,7 +19,7 @@ export default function About(props:any) {
 
   const experiences = [
     {
-      year: "2025",
+      year: "2025 - Now",
       role: "Software Engineer",
       company: "PT. Bank Mandiri",
       duration: "OBDS (Old Branch Delivery System)",
@@ -48,15 +48,6 @@ export default function About(props:any) {
       icon: <AppstoreOutlined style={{ fontSize: "36px" }} />,
       color: "from-green-500 to-emerald-500",
     },
-    {
-      year: "October 2022",
-      role: "Graduation",
-      company: "Del Institute of Technology",
-      description:
-        "Completed a Diploma in Information Technology and started my professional career right after graduating.",
-      icon: <TrophyOutlined style={{ fontSize: "36px" }} />,
-      color: "from-orange-500 to-red-500",
-    },
   ];
 
   const scrollToIndex = (index: number) => {
@@ -84,45 +75,54 @@ export default function About(props:any) {
   };
 
   return (
-    <section ref={props.ref} className="min-h-screen py-14 bg-gradient-to-b from-background to-muted/20">
+    <section ref={props.ref} className="min-h-screen py-10 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Experience Timeline Section */}
           <div>
-           <h1 className="font-serif font-bold">Work Experience</h1>
-            <div className="relative mt-10">
+            <h1 className="font-serif font-semibold">Work Experience</h1>
+            <div className="relative mt-2">
+              {/* Navigation Buttons */}
+
               {/* Navigation Buttons */}
               <div className="flex justify-between items-center mb-8 px-4">
+
+                {/* Previous Button */}
                 <button
                   onClick={handlePrevious}
                   disabled={activeIndex === 0}
-                  className="rounded-full bg-card border border-border hover:bg-accent hover:border-purple-500/50 disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300 shadow-lg hover:shadow-purple-500/20"
+                  className="experience-nav-button"
+                  aria-label="Previous experience"
                 >
-                  <ArrowLeftOutlined style={{color:"white"}} />
+                  <ArrowLeftOutlined />
                 </button>
 
+                {/* Pagination */}
                 <div className="flex space-x-3">
-                  {experiences.map((_, idx) => (
+                  {experiences.map((_, index) => (
                     <button
-                      key={idx}
-                      onClick={() => scrollToIndex(idx)}
-                      className={`h-3 rounded-full transition-all duration-300 ${
-                        idx === activeIndex
-                          ? "bg-purple-500 w-5 shadow-lg shadow-purple-500/50"
-                          : "bg-muted-foreground/20 w-12 hover:bg-muted-foreground/40"
-                      }`}
+                      key={index}
+                      onClick={() => scrollToIndex(index)}
+                      className={`experience-dot ${index === activeIndex ? "active" : ""
+                        }`}
+                      aria-label={`Go to experience ${index + 1}`}
+                      aria-current={index === activeIndex ? "true" : undefined}
                     />
                   ))}
                 </div>
 
+                {/* Next Button */}
                 <button
                   onClick={handleNext}
                   disabled={activeIndex === experiences.length - 1}
-                  className="p-3 rounded-full bg-card border border-border hover:bg-accent hover:border-purple-500/50 disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300 shadow-lg hover:shadow-purple-500/20"
+                  className="experience-nav-button"
+                  aria-label="Next experience"
                 >
-                  <ArrowRightOutlined style={{color:"white"}} />
+                  <ArrowRightOutlined />
                 </button>
+
               </div>
+
 
               {/* Horizontal Timeline */}
               <div className="relative overflow-x-auto pb-8 pt-5 hide-scrollbar">
@@ -132,11 +132,10 @@ export default function About(props:any) {
                       {/* Experience Card */}
                       <div
                         id={`exp-${idx}`}
-                        className={`flex flex-col items-center transition-all duration-500 ${
-                          idx === activeIndex
-                            ? "scale-100 opacity-100"
-                            : "scale-90 opacity-50 blur-[1px]"
-                        }`}
+                        className={`flex flex-col items-center transition-all duration-500 ${idx === activeIndex
+                          ? "scale-100 opacity-100"
+                          : "scale-90 opacity-50 blur-[1px]"
+                          }`}
                       >
                         {/* Year Badge */}
                         <div className="mb-4">
@@ -147,9 +146,8 @@ export default function About(props:any) {
 
                         {/* Icon Circle */}
                         <div
-                          className={`relative mb-6 w-24 h-24 rounded-full bg-gradient-to-br ${exp.color} flex items-center justify-center shadow-2xl z-10 transition-transform duration-300 ${
-                            idx === activeIndex ? "scale-110" : ""
-                          }`}
+                          className={`relative mb-6 w-20 h-20 rounded-full bg-gradient-to-br ${exp.color} flex items-center justify-center shadow-2xl z-10 transition-transform duration-300 ${idx === activeIndex ? "scale-110" : ""
+                            }`}
                         >
                           <div className="text-white">{exp.icon}</div>
 
@@ -168,22 +166,21 @@ export default function About(props:any) {
 
                         {/* Card Content */}
                         <div
-                          className={`w-80 md:w-96 bg-card/80 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-500 shadow-xl ${
-                            idx === activeIndex
-                              ? "border-purple-500/50 shadow-2xl shadow-purple-500/20 transform translate-y-0"
-                              : "border-border shadow-lg translate-y-2"
-                          }`}
+                          className={`w-80 md:w-96 bg-card/80 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-500 shadow-xl ${idx === activeIndex
+                            ? "border-purple-500/50 shadow-2xl shadow-purple-500/20 transform translate-y-0"
+                            : "border-border shadow-lg translate-y-2"
+                            }`}
                         >
                           <h3 className="text-2xl font-bold mb-2 text-foreground">
-                            {exp.role}
+                            {exp.company}
                           </h3>
                           <p
                             className={`text-lg font-semibold mb-1 bg-gradient-to-r ${exp.color} bg-clip-text text-transparent`}
                           >
-                            {exp.company}
+                            {exp.duration}
                           </p>
                           <p className="text-lg md:text-sm text-muted-foreground mb-4 font-medium">
-                            {exp.duration}
+                            {exp.role}
                           </p>
                           <p className="text-lg md:text-sm text-foreground/80 mb-6 leading-relaxed">
                             {exp.description}
@@ -199,11 +196,10 @@ export default function About(props:any) {
                             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-pink-500/30" />
                             {/* Animated line */}
                             <div
-                              className={`absolute inset-0 bg-gradient-to-r ${
-                                idx < activeIndex
-                                  ? "from-purple-500 to-pink-500"
-                                  : "from-purple-500/50 to-pink-500/50"
-                              } transition-all duration-500`}
+                              className={`absolute inset-0 bg-gradient-to-r ${idx < activeIndex
+                                ? "from-purple-500 to-pink-500"
+                                : "from-purple-500/50 to-pink-500/50"
+                                } transition-all duration-500`}
                               style={{
                                 width: idx < activeIndex ? "100%" : "0%",
                               }}
@@ -248,6 +244,53 @@ export default function About(props:any) {
             left: 100%;
           }
         }
+
+              
+      /* Navigation Buttons */
+      .experience-nav-button {
+        padding: 15px;
+        border-radius: 40%;
+        background-color: #7c3aed;
+        border: 1px solid #7c3aed;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(124, 58, 237, 0.25);
+      }
+
+      .experience-nav-button:hover:not(:disabled) {
+        background-color: #6d28d9;
+        border-color: #6d28d9;
+        box-shadow: 0 4px 20px rgba(124, 58, 237, 0.5);
+        transform: scale(1.08);
+      }
+
+      .experience-nav-button:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+
+      /* Pagination Dots */
+      .experience-dot {
+        height: 12px;
+        width: 32px;
+        border-radius: 9999px;
+        background-color: #d1d5db;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .experience-dot:hover {
+        background-color: #a78bfa;
+      }
+
+      .experience-dot.active {
+        width: 20px;
+        background-color: #7c3aed;
+        box-shadow: 0 0 12px rgba(124, 58, 237, 0.5);
+      }
+
       `}</style>
     </section>
   );

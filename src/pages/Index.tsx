@@ -3,6 +3,7 @@ import About from "../components/modules/About";
 import Contact from "../components/modules/Contact";
 import Hero from "../components/modules/Hero";
 import Skill from "../components/modules/Skill";
+import Studies from "../components/modules/Studies";
 
 export default function Index(){
   const aboutRef = useRef(null);
@@ -19,6 +20,7 @@ export default function Index(){
         scrollToContact={() => scrollTo(contactRef)}
       />
       <About ref={aboutRef}/>
+      <Studies/>
       <Skill/>
       <Contact ref={contactRef}/>
     </div>

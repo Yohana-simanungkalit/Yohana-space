@@ -14,7 +14,7 @@ export default function Contact(props:any) {
   const contacts = [
     {
       name: "Email",
-      body: "yohanaesimanungkalit@gmail.com",
+      body: "yohanasimanungkalit95@gmail.com",
       icon: <MailTwoTone style={{fontSize:"21px"}}/>,
       gradient: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-50",
@@ -33,23 +33,23 @@ export default function Contact(props:any) {
   const socials = [
     {
       icon: <GithubOutlined/>,
-      link: "https://github.com/yourusername",
+      link: "https://github.com/Yohana-simanungkalit",
       color: "hover:bg-gray-900",
       label: "GitHub",
     },
     {
       icon: <LinkedinOutlined/>,
-      link: "http://linkedin.com/in/27yohanasimanungkalit/",
+      link: "www.linkedin.com/in/yesimanungkalit",
       color: "hover:bg-blue-600",
       label: "LinkedIn",
     },
   ];
 
   return (
-    <section ref={props.ref} className="min-h-screen py-14 bg-gradient-to-b from-background to-muted/20">
+    <section ref={props.ref} className="min-h-screen bg-gradient-to-b from-background to-muted/20">
       <div className="container max-w-5xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-14">
           <h1 className="font-serif font-bold text-4xl md:text-5xl mb-6 text-foreground">
             Let's Work{" "}
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -63,17 +63,17 @@ export default function Contact(props:any) {
         </div>
 
         {/* Contact Cards */}
-        <Row gutter={[24, 24]} className="mb-10">
+        <Row gutter={[24, 24]} className="mb-5">
           {contacts.map((item, key) => (
             <Col xs={24} sm={12} key={key}>
               <Card
                 className="h-full transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 border-2 hover:border-purple-500/50 group cursor-pointer"
                 onClick={() => item.link && window.open(item.link, "_self")}
               >
-                <div className="flex flex-col items-center text-center py-2">
+                <div className="flex flex-col items-center text-center py-1">
                   {/* Icon */}
                   <div
-                    className={`mb-4 w-14 h-14 rounded-xl ${item.bgColor} flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg`}
+                    className={`mb-4 w-10 h-10 rounded-xl ${item.bgColor} flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg`}
                   >
                     <span className={`bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent`}>
                       {item.icon}
@@ -105,7 +105,7 @@ export default function Contact(props:any) {
           <p className="text-muted-foreground mb-6 text-2xl sm:text-lg font-medium">
             Connect with me
           </p>
-          <div className="flex justify-center gap-6">
+          <div className="flex justify-center gap-8">
             {socials.map((social, key) => (
               <Button
                 key={key}
@@ -115,7 +115,7 @@ export default function Contact(props:any) {
                 href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`w-16 h-16 flex items-center justify-center rounded-xl border-2 transition-all duration-300 hover:scale-110 hover:shadow-xl ${social.color} hover:text-white hover:border-transparent group`}
+                className={`w-20 h-14 flex items-center justify-center rounded-xl border-2 transition-all duration-300 hover:scale-110 hover:shadow-xl ${social.color} hover:text-white hover:border-transparent group`}
                 aria-label={social.label}
               />
             ))}
@@ -123,7 +123,7 @@ export default function Contact(props:any) {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-8 text-center">
+        <div className="mt-6 text-center">
           <div className="inline-flex flex-col items-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl border-2 border-purple-200">
             <p className="text-2xl sm:text-lg text-foreground mb-4">
               Ready to start a conversation?
@@ -131,8 +131,8 @@ export default function Contact(props:any) {
             <Button
               type="primary"
               size="large"
-              href="mailto:yohanaesimanungkalit@gmail.com"
-              className=" bg-gradient-to-r from-purple-500 to-pink-500 border-0 h-12 px-8 text-base font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
+              href="mailto:yohanasimanungkalit95@gmail.com"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 border-0 h-12 px-8 text-base font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
               <p className="text-xl sm:text-lg">Send me an email</p>
             </Button>

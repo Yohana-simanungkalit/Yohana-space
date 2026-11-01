@@ -9,28 +9,28 @@ import { Card, Col, Row } from "antd";
 export default function Skill() {
   const mySkills = [
     {
-      icon: <TrophyTwoTone twoToneColor="#8b5cf6" style={{ fontSize: "28px" }} />,
+      icon: <TrophyTwoTone twoToneColor="#8b5cf6" style={{ fontSize: "25px" }} />,
       title: "Frontend Development",
       description: "Javascript, React, TypeScript, CSS",
       gradient: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-50",
     },
     {
-      icon: <HeartTwoTone twoToneColor="#10b981" style={{ fontSize: "28px" }} />,
+      icon: <HeartTwoTone twoToneColor="#10b981" style={{ fontSize: "25px" }} />,
       title: "Performance",
       description: "Optimization, SEO, Web Vitals, Accessibility",
       gradient: "from-green-500 to-emerald-500",
       bgColor: "bg-green-50",
     },
     {
-      icon: <ProjectTwoTone twoToneColor="#3b82f6" style={{ fontSize: "28px" }} />,
+      icon: <ProjectTwoTone twoToneColor="#3b82f6" style={{ fontSize: "25px" }} />,
       title: "Design",
       description: "UI/UX Design, Figma, Responsive Design",
       gradient: "from-blue-500 to-cyan-500",
       bgColor: "bg-blue-50",
     },
     {
-      icon: <StarTwoTone twoToneColor="#f59e0b" style={{ fontSize: "28px" }} />,
+      icon: <StarTwoTone twoToneColor="#f59e0b" style={{ fontSize: "25px" }} />,
       title: "Modern Tools",
       description: "Git, CI/CD, Testing, Design Systems",
       gradient: "from-orange-500 to-red-500",
@@ -39,11 +39,11 @@ export default function Skill() {
   ];
 
   return (
-    <section id="skills" className="min-h-screen py-14 bg-gradient-to-b from-background to-muted/20">
-      <div className="container mx-auto px-4">
+    <section id="skills" className="min-h-screen py-2 bg-gradient-to-b from-background to-muted/20">
+      <div className="container mx-auto px-10">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-15">
             <h1 className="font-serif font-bold text-4xl md:text-5xl mb-4 text-foreground">
               Skills &{" "}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -66,7 +66,7 @@ export default function Skill() {
                     <div className="flex flex-col items-center pt-5">
                       {/* Icon Container */}
                       <div
-                        className={`mb-4 w-20 h-20 rounded-2xl ${item.bgColor} flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg`}
+                        className={`mb-4 w-16 h-15 rounded-2xl ${item.bgColor} flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg`}
                       >
                         {item.icon}
                       </div>
